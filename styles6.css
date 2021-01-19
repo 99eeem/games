@@ -1,0 +1,558 @@
+* {
+  padding: 0;
+  margin: 0 ;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-image: url(img/eiki.png);
+  background-size: auto 100%;
+  
+  
+  perspective: 1000px;
+
+}
+.contents {
+  background-color: white;
+  padding-top: 80px;
+
+ 
+}
+.contents li {
+  display: none;
+  transition: all 8s ease;
+}
+
+.colum {
+  
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+
+  transition: all 8s ease;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+
+
+.timeup {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.tabs li {
+  background-color: gray;
+
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  margin: 0 15px;
+  list-style-type: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  
+
+
+}
+.tabs li.show{
+  background-color: white;
+  transition: all 8s ease;
+}
+.contents li.show {
+  display: block;
+}
+
+.container {
+  background-color: white;
+  margin: 70px auto;
+  width: 60%;
+  border: 2px solid red;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container h1 {
+  font-size: 50px;
+  font-weight: 700px;
+  margin-bottom: 20px;
+  display: flex;
+  text-align: center;
+}
+.container p {
+ margin-top: 40px;
+}
+@keyframes showman{
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+#soon span {
+  animation: showman 1s backwards;
+  font-size: 40px;
+}
+@media screen and (max-width: 750px){
+  #soon span {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+
+}
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.issue {
+  width: 20%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 2px solid black;
+  background-color: lightseagreen;
+  justify-content: center;
+  box-shadow: 4px 4px 4px 4px rgb(1, 64, 88);
+  margin-bottom: 30px;
+}
+.question {
+  width: 100%;
+  height: 250px;
+  
+}
+.answer {
+  width: 100%;
+  height: 250px;
+  display: none;
+  background-color: white;
+
+}
+.question.disapper {
+  display: none;
+}
+.answer.apper {
+  display: block;
+}
+.game {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  
+}
+.seven {
+  margin: 10px;
+  width: 20%;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1s ease;  
+ 
+
+}
+.game-title {
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  font-weight: 800;
+}
+.open {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 60px;
+  text-align: center;
+  line-height: 150px;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  position: absolute;
+}
+.seven.activate {
+  transform: rotateY(180deg);
+}
+.close.begin:hover {
+  transform: scale(0.8);
+}
+.close {
+  width: 100%;
+  height: 100%;
+ 
+  border: 2px solid black;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  position: absolute;
+  transition: all .6s;
+  overflow: hidden;
+}
+.close img{
+  width: 100%;
+  height: 100%;
+}
+.allIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#countup, #space {
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  font-size: 40px;
+}
+.mirroer {
+  width: 150px;
+  height: 200px;
+  position: relative;
+  background-color: cornflowerblue;
+}
+.card.activate {
+  transform: rotateY(180deg);
+}
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(240, 73, 6);
+ transform-style: preserve-3d;
+ transition: all 1s ease;
+
+}
+.front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: blueviolet;
+  backface-visibility: hidden;
+  
+}
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: chocolate;
+  backface-visibility: hidden;
+  transform: rotate(180deg);
+}
+.grid {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.square {
+  width: 30%;
+  border: 2px solid black;
+  border-collapse: collapse;
+  height: 150px;
+
+}
+.mole {
+  background-image: url(img/steve.jpg);
+  background-size: 100% 100%;
+
+
+}
+.threeissue {
+  margin: 0 auto;
+  width: 60%;
+  background-color: white;
+
+
+}
+.questionbar {
+  text-align: center;
+  width: 60%;
+  height: 40px;
+  border: 3px solid black;
+  margin: 30px auto;
+  margin-top: 30px;
+  
+  
+
+
+}
+.answerbar {
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+.answerbar div {
+  width: 30%;
+  margin: 20px 30px;
+  border: 3px solid black;
+  height: 40px;
+
+}
+.threeissue h3 {
+  text-align: center;
+}
+.TicTac {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 60%;
+margin: 0 auto;
+
+}
+.status {
+  display: flex;
+  justify-content: space-around;
+}
+
+.TICspace {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+
+  justify-content: center;
+
+
+}
+.cell {
+  width: 100px;
+  height: 100px;
+
+  border: 1px solid black;
+
+}
+.cell:nth-child(3n){
+  border-right: none;
+}
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7){
+  border-left: none;
+}
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3){
+  border-top: none;
+}
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9){
+  border-bottom: none;
+}
+.cell.x::after{
+  content: "O";
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell.o::after{
+  content: "X";
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lact {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+ 
+
+ 
+
+}
+.ice {
+  position: relative;
+  
+}
+.sheev {
+  width: 50%;
+  height: 500px;
+  position: relative;
+ border: 2px solid black;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  transform-style: preserve-3d;
+  box-shadow: 0px 20px 20px #333333, 0px 0px 20px #333333;
+ 
+ 
+  padding: 30px;
+  z-index: 1;
+
+
+}
+.curcle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 1;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 255, 145),
+    rgb(255, 255, 36)
+    
+  );
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.ice img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  height: 90%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  transition: all .5s ease;
+  
+
+  
+}
+.info h3 {
+  font-weight: lighter;
+}
+.info {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.sizes {
+  display: flex;
+  justify-content: space-evenly;
+width: 100%;
+margin: 10px 0;
+
+}
+.sizes button {
+  border-radius: 5px;
+  width: 20%;
+  background-color: white;
+}
+
+.buy {
+
+  width: 70%;
+  border-radius: 5px;
+  background-color: #333333;
+  color: white;
+}
+.sizes button.most {
+  background-color: gray;
+
+  
+}
+.TypingGame,
+.Math,
+.Jeaan {
+  width: 60%;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.typed {
+  color: red;
+}
+.untyped {
+  color: black;
+}
+#restset {
+  float: right;
+   width: 100px;
+  height: 60px;
+  margin: 10px;
+  font-size: 15px;
+
+}
+#start {
+  float: right;
+  width: 100px;
+    margin: 10px;
+  height: 60px;
+  font-size: 15px;
+}
+.ikoiko {
+  display: flex;
+  justify-content: space-evenly;
+
+
+}
+#result1 {
+
+}
+.Timeleft {
+  font-size: 40px;
+}
+.note {
+  display: flex;
+}
+.tododiv {
+  margin: 10px;
+  display: flex;
+  height: 35px;
+  border: 2px solid black;
+  background-color: white;
+  transition: all .5s ease;
+}
+.todo {
+  list-style-type: none;
+  width: 100%;
+  line-height: 25px;
+  padding: 5px;
+
+}
+.buttontrash {
+  border: none;
+  width: 35px;
+  background-color: orange;
+  transition: all .5s ease;
+  
+}
+.buttontrash:hover{
+  background-color: rgb(24, 247, 24);
+
+}
+.fa-trash-alt{
+  pointer-events: none;
+}
+.dropdown{
+  transform: translateY(-100px);
+  opacity: 0;
+}
